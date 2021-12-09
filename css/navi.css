@@ -1,0 +1,109 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin-top: 1%;
+  /* box-shadow: -3px -3px 7px #ffffff73,3px 3px 5px rgba(94,104,121,0.288); */
+  /* background: #dde1e7; */
+  height: 60px;
+  z-index: 100;
+  border-radius: 5px;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  position: absolute;
+  right:0
+}
+
+.menu li {
+  padding: 8px 12px;
+  margin: 0 10px;
+  transition: 0.5s;
+  border-radius: 20px;
+  background: #0061ff;
+  box-shadow: -3px -3px 5px #1c73ff,3px 3px 5px rgba(1, 28, 75, 0.288);
+  height:35px;
+}
+
+.menu li a {
+  color: #fff;
+ 
+}
+
+.menu li:hover{
+  background: #0061ff;
+  box-shadow: inset -3px -3px 5px rgba(196, 196, 196, 0.24) ,inset 3px 3px 5px rgba(74, 82, 97, 0.288)!important;
+}
+
+.menu li a:hover {
+  color:#1c1c1c;
+  transition: 0.5s;
+}
+
+.logo {
+  position: relative;
+  padding: 5px 20px;
+  width:100px;
+  height:45px;
+  line-height: 45px;
+  top:-7px;
+  left:-10px;}
+
+
+
+/*
+       .btn {letter-spacing: 0;}
+       .btn:hover,
+       .btn:active {letter-spacing: 5px;}
+      */
+
+/*       
+.btn:after,
+.btn:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(0, 0, 0, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.btn:hover:after,
+.btn:hover:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-color: rgba(0, 0, 0, 0.8);
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.btn:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+} */
+
+/*메뉴호버*/
+
+
+
+        
+        
+        

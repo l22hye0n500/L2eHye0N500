@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HOLLYS Coffee</title>
+
+ <link href="css/jquery.bxslider.css" rel="stylesheet">
+    
+    <script src="js/jquery-3.1.1.min.js"> </script>
+    
+    <script src="js./jquery.bxslider.js"> </script>
+    
+      <link rel="shortcut icon" href="images/favicon.ico">
+<style>
+    *{margin: 0; padding: 0;}
+    ul,ol{margin: 0;padding:0; list-style:none; }
+    a{color:grey;text-decoration: none;}
+    
+    .header1{ height:100px; width:55%; position:relative; margin: 0 auto;}
+    .header1>.head1{/*border:1px blue solid;*/ width:300px; height:30%; position:absolute;}
+    .header1>.head1 a{ position: relative;}
+     .header1>.head1 a:nth-child(1){top:-10px;}
+    .header1>.head1 a:nth-child(2){ top:-51px;}
+     .header1>.head1 a:nth-child(3){ top:-53px; left:5px;}
+    
+     .header1>.head2{/*border:1px blue solid;*/ width:300px; height:100px; position:absolute; margin-left: 35%; }
+    .header1>.head2>a{background: url(images/logo.gif); display: block; width:54px; height:62px; margin: 0 auto;}
+    
+    .header1>.head3>ul{float:right;}
+    .header1>.head3>ul>li{display: inline-block; font-size:8pt; }
+    .header1>.head3>ul>li>a{font-size:8pt; font-weight: bold; padding:0 5px;}
+    
+    
+    
+    #nav{position:relative; width:100%; height:60px; background-color: transparent;}
+    #nav ul{width:1100px; height: 60px; margin:0 auto;}
+    #nav ul li{float: left;width:180px; height:60px; font-weight:bold;} 
+    #nav ul li a {display: block; width:100%; height:100%; font-size:18px;  color:black;text-align: center; line-height: 60px;
+    }
+    #nav>ul>li:hover>a{color:#fff;background: #8a000d; }
+    
+    
+    #nav ul li .smenu{position:absolute; width: 220px; height:0px; overflow:hidden; background: #666;z-index: 9999; }
+    #nav ul li .smenu li{width:200px; height:25px; }
+    #nav ul li .smenu li>a{display: block; width:90%; height:100%; color:grey; font-size:14px;}
+    #nav ul li .smenu li:hover a{color:#fff;}
+    
+    #nav ul:hover .na, #nav ul:hover .smenu{transition:all 0.5s; height:250px;}
+    #nav .na{width:100%; height: 0; position: absolute; top:100%;left:0;background:#666; transition:all 0.5s; z-index: 1;}
+    
+    #nav>ul>li>a>span{display: block; font-size:12px; color:grey; line-height: 50px;  height:50px;  position: relative; top:-35px; text-align: center; left:0px; opacity: 0;  }
+    #nav ul:hover span{opacity: 1; }
+    #nav>ul>li:hover span{color:white;}
+    .border1{border:1px #8a000d solid; }
+    
+    
+    
+    .sec1{width:950px; height:270px; margin:0 auto; position: relative; top:-50px; }
+    .sec1>.s1 a{display:block; background: url(images/b1.jpeg);width:224px; height:270px;}
+    
+    .sec1>.s2{display:block; ;width:450px; height:30px; /*border:1px blue solid;*/ position: absolute; top:0px; left: 230px;margin: 0 auto;}
+    
+    .sec1>.s2>.s22>a{display: block; background: url(images/b2.jpeg);width:461px; height:119px;}
+    
+    .s23{ position: relative; top:0px; width:461px;height: 150px;}
+    .s23>.s231{position: absolute;width:160px; height:150px; border-left:1px grey dotted; top:0px; left:330px; }
+    
+    .s23>.s231>a{ position: absolute;display: block; background: url(images/mallProdut_201904151016386800.png); width:107px; height:100px; top:0px; left:30px; background-size: cover; }
+    
+    
+    .s23>.s232{position: absolute;width:160px; height:150px; border-left:1px grey dotted; top:0px; left:165px;}
+    
+    .s23>.s232>a{ position: absolute;display: block; background: url(images/mallProdut_201904151019294210.png); width:107px; height:100px; top:0px; left:30px; background-size: cover; }
+    
+    
+     .s23>.s233{position: absolute;width:160px; height:150px;  top:0px; left:0px; }
+    
+    .s23>.s233>a{ position: absolute;display: block; background: url(images/mallProdut_201905030111029300.png); width:107px; height:100px; top:0px; left:30px; background-size: cover; }
+    
+    
+      .sec1>.s3 a{display:block; background: url(images/banner2.gif) no-repeat;width:224px; height:270px;position: absolute; top:0px; right:0;}
+    
+    
+    .sec2{width: 950px; height:152px;  margin: 0 auto; position: relative; top:-20px}
+    .sec2>.ban1>a{display: block; background: url(images/membership.jpg);width:465px; height: 152px;}
+     .sec2>.ban2>a{display: block; background: url(images/giftcard.jpg);width:465px; height: 152px; position: absolute; top:0px; right:0;}
+    
+    
+    .sec3{width: 950px; height:152px;  margin: 0 auto; position: relative; top:0px}
+    .sec3>.s2_1>a { display: block; position: absolute; width:232px; height:100%;  background:url(images/academy1.gif) no-repeat;;}
+      .sec3>.s2_2>a { display: block; position: absolute; width:232px; height:100%; left:232px; background:url(images/academy1.gif) no-repeat;}
+    
+    
+    .sec3>.s2_3{ width:232px; height:100%; position: absolute; left:480px; }
+    .sec3>.s2_3 a{display: block; font-size: 10pt; line-height: 25px;}
+    .sec3>.s2_3>a:nth-child(1){display: block; background: url(images/news.gif) no-repeat; width: 60px; height:17px;margin-bottom: 10px;}
+    
+    .sec3>.s2_3>a:nth-child(1):before{content: "";background: url(images/arrow.gif); display: block; width:15px; height:15px;position: absolute; top:0px; left:65px;}
+    
+    .sec3>.s2_4{ width: 232px; height:100%; position: absolute; right:0;}
+    .butt{width:210px; height: 60px; border:1px transparent solid; margin:0 auto; position:relative; }
+    .butt>.butt1{display: block; border-right:1px grey dotted; width:50px; height:50px;margin:20px; text-align: center; padding-right:10px;}
+    .butt1:after{content: "창업안내"; position: absolute; top:60px; left:25px;font-size: 7pt;}
+    .butt>.butt2{display: block; border-right:1px grey dotted; width:50px; height:50px;margin:20px; text-align: center; position: absolute; top:0px; left:55px;padding:0 10px;}
+    .butt2:after{content: "아카데미강좌"; position: absolute; top:40px; left:8px; font-size: 7pt;}
+    .butt>.butt3{display: block;  width:50px; height:50px;margin:20px; text-align: center; position: absolute; top:0px; left:110px;padding-left:20px;}
+    .butt3:after{content: "고객문의"; position: absolute; top:40px; left:25px; font-size: 7pt;}
+    
+    .border2{ position: relative; border-bottom:2px #8a000d solid; width:100%; margin-bottom:200px;top: 200px;}
+    
+    
+    .live{ background: url(images/live.gif) no-repeat; width:230px; height:22px; position: relative; bottom: -20px;}
+    .live>a:nth-child(1){display: block; background: url(images/facebook.gif); width:22px;height:22px;position: absolute; left:150px;}
+    .live>a:nth-child(2){display: block; background: url(images/instagram.gif); width:22px;height:22px;position: absolute; left:180px;}
+    .live>a:nth-child(3){display: block; background: url(images/blog.gif); width:22px;height:22px;position: absolute; left:210px;}
+    
+    
+    .load{width:100%; height:180px;  line-height: 180px; margin:  30px 0; }
+    .load:after{content: ""; width:36px; height:36px; position: absolute; left:320px; bottom:-210px; margin: 0; padding: 0;}
+    
+   
+    
+    .text1{font-size: 10pt; position: absolute; top:30px;}
+    .text1:after{content: "바로가기"; position: absolute; top:50px; left:25px; }
+    .text1:before{content: "";background: url(images/arrow.gif); display: block; width:15px; height:15px;position: absolute; top:52px; left:5px;}
+    
+      .te2:after{content: "바로가기"; position: absolute; top:70px; left:25px; }
+    .te2:before{content: "";background: url(images/arrow.gif); display: block; width:15px; height:15px;position: absolute; top:71px; left:5px;}
+    
+    
+    
+    p a{position: absolute; top: 110px; text-align: center; font-size: 10pt; width: 120px; margin: 0 auto; left:20px;}
+    p a:hover{color:#8a000d; cursor: pointer;}
+    
+   
+     footer{width:1900px; height:150px; background-color: #8a000d; position: relative; bottom:-300px; overflow: hidden; color:white;font-size:10pt; }
+    .foot1{width:620px; height: 120px;  position: relative; left:480px; top:20px;}
+    .foot1 ul li{ padding:0px; display: inline-block; color:white ; position: relative;}
+    .foot1 ul li:after{content: ""; position: absolute; left:0; top:50%; width:1px; height:10px; background: #ccc; transform:translateY(-50%);}
+    
+    .foot1 ul li a{color:white ; font-size:10pt; display: block; padding: 0 5px; margin: 0;}
+    .foot1 ul li:last-child a{padding-right: 0;}
+    .foot1 ul li:first-child:after{display: none; }
+    .foot1 .bold1{font-weight: bold;}
+    .foot1 ul li a:hover{text-decoration: underline;}
+    #sfoot{position:absolute; top:10px; padding-top: 20px; color:rgba(255,255,255,0.5); font-size: small;  line-height: 1.5;}
+    
+    </style>
+    
+    
+     
+    <script> 
+     $(document).ready(function(){
+      $('.main').bxSlider({
+      })
+       }); 
+       </script>
+       
+       
+       
+</head>
+
+<body>
+<div class="header1">
+    <div class="head1">
+    <a href="#"><img src="images/gnb_smenu01.png"> </a>   
+    <a href="#"> <img src="images/gnb_smenu02_2.gif"></a>   
+    <a href="#">  <img src="images/gnb_smenu04.gif"></a>  
+    </div>
+     <div class="head2"><a href="#"></a></div>
+      <div class="head3">
+          <ul>
+              <li><a href="#">멤버십 로그인</a></li>
+               <li><a href="#">멤버십 가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                 <li><a href="#">English</a></li>
+                  <li><a href="#">中文</a></li>
+          </ul>
+      </div>
+</div>
+
+	<header>
+        <nav id="nav">
+			<ul>
+					<li><a href="#">Menu<span>메뉴</span></a>
+						<ul class="smenu">
+							<li><a href="#">New menu</a></li>
+							<li><a href="#">COFFEE</a></li>
+							<li><a href="#">라떼 . 초코렛 . 티</a></li>
+							<li><a href="#">스파클링 . 아이스티</a></li>
+							<li><a href="#">베이커리 . 스낵 MD</a></li>
+							<li><a href="#">MD상품</a></li>
+							<li><a href="#">MD원두</a></li>
+						</ul>
+					</li>
+				
+					<li>
+						<a href="#">HOLLYS Mall<span>할리스몰</span></a>
+						<ul class="smenu">
+							<li><a href="#">할리스콘</a></li>
+							<li><a href="#">할리스 기프트카트</a></li>
+						</ul>
+					
+					<li>
+						<a href="#">Membership<span>멤버십</span></a>
+						<ul class="smenu">
+							<li><a href="#">멤버십 혜택안내</a></li>
+						</ul>
+					</li>
+					
+					<li>
+						<a href="#">HOLLYS News<span>이벤트 및 공지</span></a>
+						<ul class="smenu">
+							<li><a href="#">Notice</a></li>
+							<li><a href="#">Event</a></li>
+						</ul>
+					</li>
+					
+					<li>
+						<a href="#">Store<span>매장</span></a>
+						<ul class="smenu">
+							<li><a href="#">국내</a></li>
+							<li><a href="#">해외</a></li>
+						</ul>
+					</li>
+				
+				<li>
+						<a href="#">HOLLYS is<span>할리스소개</span></a>
+						<ul class="smenu">
+							<li><a href="#">HOLLYS COffee</a></li>
+							<li><a href="#">About Coffee</a></li>
+							<li><a href="#">CSR</a></li>
+							<li><a href="#">Gallery</a></li>
+				            <li><a href="#">혜택 안내</a></li>
+							<li><a href="#">본사 위치</a></li>
+							<li><a href="#">채용안내</a></li>
+							<li><a href="#">가맹 개설안내</a></li>
+							<li><a href="#">B2B 사업 소개</a></li>
+                        </ul>
+					</li>
+					<li class="na">
+</li>
+        </ul>
+    </nav>
+</header>
+<div class="border1"></div>
+<div class="main">
+	<img src="images/slide1.jpg" width="100%" height="480">
+	<img src="images/slide2.jpg" width="100%" height="480">
+	<img src="images/slide3.jpg" width="100%" height="480">
+</div> 
+
+    <div class="sec1">
+
+        <div class="s1"><a href="#"><!--프랜차이즈--></a></div>
+       
+        <div class="s2"><!--할리스몰 넣기-->
+        <!--       할리스 커피의 다양한 상품들을 온라인에서도 만나보세요.-->
+        <div class="s22"><a href="#"></a></div>
+        <div class="s23">
+            <div class="s231"><p><a href="#">올리브 베이컨 치아바타</a></p><a href="#"></a></div>
+            <div class="s232"><p><a href="#">에그마요</a></p><a href="#"></a></div>
+            <div class="s233"><p><a href="#">리스트레또<br> 딜라이트 R</a></p><a href="#"></a></div>
+        </div>
+       
+        
+        </div>
+        
+        
+        <div class="s3"><a href="#"><!--스토어--></a></div>
+    </div>
+
+    <div class="sec2">
+        <div class="ban1"><a href="#"></a></div>
+        <div class="ban2"><a href="#"></a></div>
+        
+    </div>
+
+ <div class="sec3">
+        
+        <div class="s2_1"><a href="#"><span class="text1">할리스 커피 아카데미와 함께하는 즐거운 커피 여행!</span></a></div>
+         <div class="s2_2"><a href="#"><span class="text1 te2">할리스 F&B는 20년의 커피 노하우를 기반으로 한 할리스 B2B솔루션을 소개합니다.</span></a></div>
+         
+         
+         
+          <div class="s2_3">
+          <a href="#"><!--이미지--></a>
+          <a href="#">SKTelecom T멤버십 VIP Pi… &nbsp;&nbsp;&nbsp;04-11</a>
+          <a href="#">LGU+멤버십 제휴 제외 매… &nbsp;&nbsp;&nbsp;05-02</a>
+          
+          <a href="#">2020디즈니 콜라보레이션… &nbsp;&nbsp;&nbsp;10-31</a>
+          </div>
+          
+          
+          
+          
+           <div class="s2_4">
+           
+           <div class="butt">
+            <a class="butt1" href="#"><img src="images/button1.gif"></a>
+               <a class="butt2" href="#"><img src="images/button2.gif"></a>
+                <a class="butt3" href="#"><img src="images/button3.gif"></a>
+        
+           </div>
+           
+        
+           </div>
+           
+          <div class="border2"></div>
+          <div class="live">
+              <a href="#" class="face"></a>
+               <a href="#" class="insta"></a>
+                <a href="#" class="blog"></a>
+              
+          </div>
+          
+          <div class="load"></div>
+    </div>
+
+
+<footer>
+      
+      <div class="foot1">
+       <ul>
+           
+           <li><a class="bold1" href="#">개인정보처리방침</a></li>
+           <li><a href="#">서비스이용약관</a></li>
+           <li><a href="#">멤버십이용약관</a></li>
+           <li><a href="#">고객문의</a></li>
+           <li><a href="#">고객설문</a></li>
+           <li><a href="#">사이트맵</a></li>
+           <li><a href="#">BI소개</a></li>
+           
+       </ul> 
+        
+        
+        <span id="sfoot">법인명: (주) 할리스에프앤비 대표자: 김유진 사업자등록번호 211-87-61044 통신판매업: 제2019-서울종로-0193호
+주소 : 서울특별시 종로구 율곡로 88 삼환빌딩 8층 (운니동) 대표전화 : 02-2188-7100 (가맹문의 : 1670-4432)
+
+COPYRIGHT (C) HOLLYS COFFEECo., Ltd. All Rights Reserved.</span>
+        </div>
+        
+        </footer>
+
+        
+         
+</body>
+</html>

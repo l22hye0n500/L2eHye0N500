@@ -1,0 +1,254 @@
+@font-face {
+    /* 
+	Bandeins Strange 
+	http://type.bandeins.de/
+	This free font is for demonstration purposes only. You may not distribute, rent, sell, give away, publicly or privately share any modified or unmodified version of the font. Special permission has been granted to crosslink to it for demo purposes only. You must obtain an appropriate license at <http://type.bandeins.de/> before linking to this font or using it in any other context.
+	*/
+  font-family: 'Bandeins-Strange';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/BandeinsStrangeVariableGX.ttf") format("truetype");
+  font-stretch: 100% 800%;
+  font-weight: 200 800;
+  font-display: block;
+}
+/*  ==========================================================
+	MIXINS
+	========================================================== */
+/*  ==========================================================
+	MAIN
+	========================================================== */
+:root {
+  --grey: #5E5D5E;
+  --mid-grey: #3f3f3f;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-color: #0061ff;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-size: 50px 50px;
+  background-position: center;
+  background-image: linear-gradient(to right, var(--mid-grey) 1px, transparent 1px), linear-gradient(to bottom, var(--mid-grey) 1px, transparent 1px);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-perspective: 900px;
+          perspective: 900px;
+  visibility: hidden;
+  font-family: 'Bandeins-Strange'!important;
+ 
+}
+
+.hi {
+  position: relative;
+  z-index: 1;
+  font-size: 80px!important;
+  font-stretch: 400%!important;
+  font-weight: 600;
+  line-height:80px!important;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+ font-family: 'Bandeins-Strange'!important;
+ display: block;
+ 
+}
+
+.hi__cuboid {
+  position: relative;
+  width: 500px;
+  height: 80px;
+  -webkit-transform-style: preserve-3d!important;
+          transform-style: preserve-3d!important;
+  margin: 30px 0;
+  
+}
+.hi__cuboid .face {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color:#0061ff;
+  
+  
+}
+.hi__cuboid .face--front {
+  width: 500px;
+  height: 80px;
+  -webkit-transform: translateZ(calc(80px/2))!important;
+          transform: translateZ(calc(80px/2))!important;
+          
+}
+.hi__cuboid .face--back {
+  width: 500px;
+  height: 80px;
+  -webkit-transform: translateZ(calc(80px/2 *-1)) rotateY(180deg) rotate(180deg);
+          transform: translateZ(calc(80px/2 *-1)) rotateY(180deg) rotate(180deg);
+}
+.hi__cuboid .face--left {
+  width: 70px;
+  height: 80px;
+  -webkit-transform: translateX(calc(80px/2 *-1)) rotateY(-90deg);
+          transform: translateX(calc(80px/2 *-1)) rotateY(-90deg);
+}
+.hi__cuboid .face--right {
+  width: 70px;
+  height: 80px;
+  -webkit-transform: translateX(calc(500px - 80px/2)) rotateY(90deg);
+          transform: translateX(calc(500px - 80px/2)) rotateY(90deg);
+}
+.hi__cuboid .face--top {
+  width: 500px;
+  height: 80px;
+  -webkit-transform: translateY(calc(80px/2 * -1)) rotateX(90deg);
+          transform: translateY(calc(80px/2 * -1)) rotateX(90deg);
+}
+.hi__cuboid .face--bottom {
+  width: 500px;
+  height: 80px;
+  -webkit-transform: translateY(calc(80px - 80px/2)) rotateX(-90deg);
+          transform: translateY(calc(80px - 80px/2)) rotateX(-90deg);
+}
+
+.face {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+.face.face--top, .face.face--bottom {
+  background: white;
+  color: black;
+  
+}
+
+.hi__word {
+  margin: 0;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  position: relative;
+  top:10px;
+}
+
+.hi__base {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 752px;
+  height: 250px;
+  
+}
+
+.hi__base-plate {
+  width: 100%;
+  height: 100%;
+  background: black;
+  border: 1px solid var(--grey);
+
+}
+
+.hi__location {
+  position: absolute;
+  margin: 0;
+  font-size: 20px;
+  font-stretch: 400%;
+  font-weight: 400;
+  
+}
+
+.hi__location--lat {
+  top: 50%;
+  left: 0vw;
+  -webkit-transform: rotate(-90deg) translateX(10px);
+          transform: rotate(-90deg) translateX(10px);
+}
+
+.hi__location--long {
+  top: 50%;
+  right: 0vw;
+  -webkit-transform: rotate(90deg) translateX(-10px);
+          transform: rotate(90deg) translateX(-10px);
+}
+
+.gsap-3-logo {
+  width: 20vw;
+  max-width: 150px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+/*  ==========================================================
+    Font Link
+    ========================================================== */
+.collection {
+  position: fixed;
+  z-index: 1000;
+  top: 24px;
+  right: 24px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.collection__link {
+  position: relative;
+  margin-bottom: 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.collection__link span {
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  height: 1px;
+  width: 10%;
+  background-color: white;
+  content: "";
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.collection__link:hover {
+  text-decoration: none;
+}
+.collection__link:hover span {
+  width: 100%;
+}

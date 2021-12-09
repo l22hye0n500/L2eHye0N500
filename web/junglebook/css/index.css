@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+
+*{margin:0; padding:0; list-style: none; text-decoration: none;}
+a{outline: 0; color:#555}
+img{border:0}
+body{width:100%; min-width:1400px; height: 40000px; font-family: Orbitron; font-size:12px; letter-spacing: 2px;}
+.bg{position: fixed; width:100%; height:100%; top:0px; left:0px; background: url(../images/Jungle-bg.jpg)no-repeat center top; background-size: cover;}
+h1{position:fixed; top:10px; left:50px; z-index: 2;}
+h1 img{width:35%;}
+
+.gnb{position:fixed; top:50px; right: 180px; z-index: 100; cursor: pointer;font-family: 'Cinzel', serif;}
+.gnb li{float:left; margin-left: 40px;}
+.gnb li a{font-size: 14px; font-weight: bold; color: #fff; transform: scale(1); opacity: 0.8; transition:all 0.5s;display: block;}
+.gnb li a:hover{transform: scale(1.5); opacity: 1;color:#daa520}
+
+
+
+.sns{position: fixed; top:2.5%; right:50px; z-index: 2;}
+.sns li{margin-top: 30px}
+.sns li .fab{font-size: 18px; color:#fff; transform: scale(1); opacity:0.8; transition:all 0.5s;}
+.sns li .fab:hover {transform: scale(1.5); opacity: 1;}
+
+.scrollNavi{position:fixed; left:100px; top:300px; z-index: 2;}
+.scrollNavi li{position:relative; width: 150px; height:35px; margin-bottom: 20px; font-size: 12px; color: #fff;font-family: 'Song Myung', serif;}
+.scrollNavi li em{position: absolute; top:8px; left:20px; font-size: 15px; font-weight: bold; color: #fff; text-shadow: 1px 1px 1px #000;}
+.scrollNavi li span {display: block; width:3%; height:100%; position: absolute; transform: skewX(-30deg); box-shadow: 1px 1px 1px #000;}
+.scrollNavi li.on span{width:100%}
+.scrollNavi li:nth-child(1) span{background: #daa520; opacity: 1}
+.scrollNavi li:nth-child(2) span{background:#daa520;opacity: 1}
+.scrollNavi li:nth-child(3) span{background: #daa520;opacity: 1}
+.scrollNavi li:nth-child(4) span{background:#daa520;opacity: 1}
+.scrollNavi li:nth-child(5) span{background:#daa520;opacity: 1}
+.scrollNavi li:nth-child(6) span{background:#daa520;opacity: 1}
+.scrollNavi li:nth-child(7) span{background:#daa520;opacity: 1}
+
+.copyright{position: fixed; bottom:20px; right:30px; font-family: arial; font-size: 11px; color: #555;}
+.copyright>.copy{position: relative; left:395px;}
+section{width:1200px; height: 700px; position: fixed; left:50%; margin-left: -600px; top:50%; margin-top: -350px; perspective: 2300px; z-index: 1;}
+section>article{width:1200px; height: 700px; position:absolute; top:0px; left:0; opacity: 0.5; z-index: 8;}
+section>article.on{opacity: 1; z-index: 9}
+section>article:nth-child(1){transform: translateZ(0px);}
+section>article:nth-child(2){transform: translateZ(-5000px);}
+section>article:nth-child(3){transform: translateZ(-10000px);}
+section>article:nth-child(4){transform: translateZ(-15000px);}
+section>article:nth-child(5){transform: translateZ(-20000px);}
+section>article:nth-child(6){transform: translateZ(-25000px);}
+section>article:nth-child(7){transform: translateZ(-30000px);}
+
+section>article>p{position:absolute; width:800px; padding:30px 60px; color:#e4e4e4; opacity: 1;font-family: 'GmarketSansMedium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); font-weight: normal; font-style: normal;  font-size: 12pt;}/*어두운 배경이면 글씨 흰색으로 바꾸기*/
+section>article>p>span{font-family: 'Song Myung', serif; font-size: 60px; letter-spacing: 0px; line-height: 1.5;text-shadow: 1px 1px 1px #000;}
+section>article>img{position:absolute}
+
+section>article:nth-child(1) p{bottom:100px; right:-400px}
+section>article:nth-child(1) p span {color:#daa520}
+
+
+section>article:nth-child(2) p{bottom:100px; left:-100px}
+section>article:nth-child(2) p span {color:#daa520}
+
+
+section>article:nth-child(3) p{bottom:0px; right:-400px}
+section>article:nth-child(3) p span {color:#daa520}
+
+
+
+section>article:nth-child(4) p{bottom:0px; right:-500px}
+section>article:nth-child(4) p span {color:#daa520}
+
+
+section>article:nth-child(5) p{bottom:150px; left:00px}
+section>article:nth-child(5) p span {color:#daa520}
+
+
+
+section>article:nth-child(6) p{bottom:100px; left:800px}
+section>article:nth-child(6) p span {color:#daa520}
+
+
+
+section>article:nth-child(7) p{bottom:250px; left:700px}
+section>article:nth-child(7) p span {color:#daa520}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>L22Hye0n500</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script> 
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+    
+    <script defer src="main/script.js"> </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/navi.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-theme.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="./main/style.css">
+ 
+
+    
+  <style>
+      @font-face {
+        font-family: 'Apple';
+        src: url('./font/AppleSDGothicNeoB.ttf');
+      }
+      @font-face {
+        font-family: 'AppleM';
+        src: url('./font/AppleSDGothicNeoM.ttf');
+      }
+
+
+
+        body{margin: 0 auto; padding: 0; width:100%; }
+        a{text-decoration: none; }
+        ul li{list-style: none;}
+        *{word-break: keep-all;
+          font-family: 'Apple'}
+
+        .wrap{position:absolute; display:block; width:100%; height: 100%; }
+
+
+        .main{
+        position: relative;
+        width:100%;
+        height:900px;
+        /* background: #0061ff; */
+        overflow: hidden;
+        }
+
+
+        .section1{position: relative; display: flex; width:100%; height:950px; justify-content: center; align-items:
+        center;overflow-x:hidden; overflow-y: hidden;}
+        .section1::after{content:""; width:100%; height: 950px; background: #fff;
+        background-size:cover ; background-position-y:60% ; position: absolute; top:0; left:0; display:
+        block; z-index: -1; background-attachment: fixed;}
+        
+
+
+
+        .web{text-align: center; position:absolute; top:18%;  font-size: 2em; color:#0061ff; font-weight: bold; line-height: 45px; width:63%;}
+        .section2{ position:relative;width:100%; height:750px; background:transparent; display: block;overflow-x:hidden;
+        overflow-y:hidden;}
+        .section2 p{position:relative; top:10%;}
+        .section2::after{content:""; width:100%; height: 950px; background:#fff;
+        background-size:cover ; background-position-y:60% ; position: absolute; top:0; left:0; display:
+        block; z-index: -1; background-attachment: fixed;}
+
+        .ttop{ position:absolute; top:12%; text-align: center;
+        display: block; width:100%; height:150px; font-size: 2em; color:#0061ff; font-weight: bold; line-height: 35px;
+        z-index: 8;}
+
+        .season.active{opacity:1; top:30%; -webkit-transition: all 1s ease;}
+        .season{ padding:0; display: flex; flex-wrap: nowrap; justify-content: space-around; position: relative; top:50%;
+        width:67%; height:auto; margin: 0 auto; z-index: 6!important; opacity: 0;}
+        .season span{display: block; position:absolute; width:300px; height:280px; left:-40px; top:-50px;
+        background-color:#0061ff ; z-index:-1; border-radius: 50%; background-attachment: fixed;}
+        .season li{display:block; width:20%; padding-top:0%;overflow: hidden; border-radius:15px;box-shadow: -3px -3px
+        7px #ffffff73,3px 3px 5px rgba(94,104,121,0.288);background:#eaecf0; }
+        .season li a{ display:block; width:100%; padding-top:0%; overflow: hidden; }
+        .season li img{ transition: 0.5s; opacity: 1; width:100%; padding-top:0%;}
+        .season li img:hover{ -webkit-filter: grayscale(100%); filter:
+        grayscale(100%); width:100%; height:100%; transform: scale(1.2); transition: 0.5s; opacity: 1;}
+        .season li p {font-family: 'AppleM'; color:#72787f; margin:0 auto; font-size: 0.8vmax; position: relative; text-align: left;
+        line-height:1.3; top:-12%; width:80%; left:0px; padding-top:20%; }
+        .season li:nth-child(1) p::after{
+          content:"Dessert Pick"; 
+          font-size: 1.2vmax;
+          position: relative;
+          left:0px;
+          top:0;
+          display: block;
+          font-family: 'Apple';
+        }
+        .season li:nth-child(2) p::after{
+          content:"My To-Do list";
+          font-size: 1.2vmax;
+          position: relative;
+          left:0px;
+          top:0;
+          display: block;
+          font-family: 'Apple';
+        }
+        .season li:nth-child(3) p::after{
+          content:"Make You";
+          font-size: 1.2vmax;
+          position: relative;
+          left:0px;
+          top:0;
+          display: block;
+          font-family: 'Apple';
+        }
+        .season li:nth-child(4) p::after{
+          content:"Planty";
+          font-size: 1.2vmax;
+          position: relative;
+          left:0px;
+          top:0;
+          display: block;
+          font-family: 'Apple';
+        }
+
+        .section3{ background:transparent; padding:0; margin:0; display: block; width:100%;
+        height:1200px; position: relative; overflow-x:hidden; overflow-y: hidden;}
+        .section3::after{content:""; width:100%; height: 100%; background:#fff;
+        background-size:cover ; background-position-y:60% ; position: absolute; top:0; left:0; display:
+        block; z-index: -1; background-attachment: fixed;}
+
+        table{ display: flex; flex-wrap: nowrap; position:relative; top:50%; width:67%; margin:0 auto; border-spacing: 20px; padding:0;}
+        table.active{opacity:1!important; top:22%!important; -webkit-transition: all 1s ease;}
+        table tr td{ width:20%; margin:none; overflow: hidden;}
+        td a { margin:0; padding:0; width:100%; padding-top:0%; display: block; }
+        td a p{ width:100px; height:280px; display: block;  z-index: 100; top:0px; left:0px;}
+        td img{width:100%; height:100%;padding:0;transition:1s; }
+        td img:hover{transition:1s; opacity:0.5; transform: rotate3d(1, -1, 0, 70deg); border-radius: 50%;}
+
+
+        .sectext1{position:absolute; top:14%; text-align: center; font-size: 2em; color:#0061ff; font-weight: bold;line-height: 45px; width:100%;}
+
+
+
+
+        .custom-shape-divider-bottom-1637232475 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        }
+
+        .custom-shape-divider-bottom-1637232475 svg {
+        position: relative;
+        display: block;
+        width: calc(196% + 1.3px);
+        height: 263px;
+        
+        }
+
+        .custom-shape-divider-bottom-1637232475 .shape-fill {
+        fill: #fff;
+        }
+
+
+
+
+
+
+        .custom-shape-divider-bottom-1637233025 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+        
+        }
+
+        .custom-shape-divider-bottom-1637233025 svg {
+        position: relative;
+        display: block;
+        width: calc(196% + 1.3px);
+        height: 263px;
+        }
+
+        .custom-shape-divider-bottom-1637233025 .shape-fill {
+        fill: #0061FF;
+        }
+        
+    </style>
+    
+    <script>
+      $(function () {
+        $(".menu li:eq(0)").click(function () {
+          $("body,html").animate({
+            "scrollTop": "900px"
+          }, 700)
+        });
+
+        $(".menu li:eq(1)").click(function () {
+          $("body,html").animate({
+            "scrollTop": "1800px"
+          }, 700)
+        });
+
+        $(".menu li:eq(2)").click(function () {
+          $("body,html").animate({
+            "scrollTop": "2600px"
+          }, 700)
+        });
+
+        $(".menu li:eq(3)").click(function () {
+          $("body,html").animate({
+            "scrollTop": "0px"
+          }, 700)
+        });
+
+
+
+        $(window).scroll(function () {
+          var h = $(window).scrollTop();
+
+        })
+      })
+    </script>
+    <!--네비 스크롤탑-->
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 850) {
+          $(".menu li").css("background" , "#eaecf0");
+          $(".menu li").css("box-shadow" , "-3px -3px 7px #ffffff73,3px 3px 5px rgba(94,104,121,0.288)");
+          $(".menu li a").css("color" , "#0061ff");
+          
+        }
+        else{
+          $(".menu li").css("background" , "#0061ff"); 
+          $(".menu li").css("box-shadow" , "-3px -3px 5px #1c73ff, 3px 3px 5px rgba(1, 28, 75, 0.288)");
+          $(".menu li a").css("color" , "#fff"); 
+        
+          
+        }
+      })
+    })
+</script>
+
+<!-- 네비 컬러 바뀜 -->
+
+
+
+
+<script>
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  })
+</script>
+
+<!--사진첩-->
+
+
+
+
+<script>
+
+$(function () {
+    var gap = 100;
+
+
+    $(window).scroll(function () {
+      var h = $(window).scrollTop();
+
+
+      if (h < 800 - gap) {
+        $(".slider-area").removeClass("active");
+      } else if (h > 800 - gap) {
+        $(".slider-area").addClass("active");
+      }
+
+    })
+    $(window).trigger("scroll");
+
+  })
+
+
+
+
+
+  $(function () {
+    var gap = 100;
+
+
+    $(window).scroll(function () {
+      var h = $(window).scrollTop();
+
+
+      if (h < 1500 - gap) {
+        $(".season").removeClass("active");
+      } else if (h > 1500 - gap) {
+        $(".season").addClass("active");
+      }
+
+    })
+    $(window).trigger("scroll");
+
+  })
+
+
+
+  $(function () {
+    var gap = 100;
+
+
+    $(window).scroll(function () {
+      var h = $(window).scrollTop();
+
+
+      if (h < 2400 - gap) {
+        $("table").removeClass("active");
+      } else if (h > 2400 - gap) {
+        $("table").addClass("active");
+      }
+
+    })
+    $(window).trigger("scroll");
+
+  })
+
+
+
+</script>
+
+
+
+    </head>
+
+    <body>
+
+     
+
+
+
+
+
+      <div class="wrap">
+
+
+       
+        <nav class="navbar">
+        <ul class="menu">
+          <li class="btn nav1"><a href="#"> Publishing </a></li>
+          <li class="btn nav2"><a href="#"> Design </a></li>
+          <li class="btn nav3"><a href="#"> Gallery </a></li>
+          <li class="btn nav4"><a href="#"> <i class="fas fa-home"></i></a></li>
+        </ul>
+      </nav>
+
+       
+     
+
+    <div class="main">
+      <div class="container">
+        <div class="hi">
+            <div class="hi__cuboid">
+                <div class="face face--front"><p class="hi__word">move on</p></div>
+                <div class="face face--back"><p class="hi__word">move on</p></div>
+                <div class="face face--top"><p class="hi__word">move on</p></div>
+                <div class="face face--bottom"><p class="hi__word">move on</p></div>
+            </div>
+            <div class="hi__cuboid">
+                <div class="face face--front"><p class="hi__word"> to the</p></div>
+                <div class="face face--back"><p class="hi__word">to the</p></div>
+                <div class="face face--top"><p class="hi__word">to the</p></div>
+                <div class="face face--bottom"><p class="hi__word">to the</p></div>
+            </div>
+            <div class="hi__cuboid">
+                <div class="face face--front"><p class="hi__word"> world</p></div>
+                <div class="face face--back"><p class="hi__word"> world</p></div>
+                <div class="face face--top"><p class="hi__word"> world</p></div>
+                <div class="face face--bottom"><p class="hi__word"> world</p></div>
+            </div>
+            
+        </div> 
+        <div class="hi__base">
+            <div class="hi__base-plate"></div>
+            <p class="hi__location hi__location--lat">97.0826° N</p>
+            <p class="hi__location hi__location--long">-97.0826° E</p>
+        </div>
+    </div>
+    
+    <!-- partial -->
+      <script defer src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.0/gsap.min.js'></script><script  src="./script.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
+     
+     
+      <div class="custom-shape-divider-bottom-1637232475">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    
+    </div>
+      
+        <div class="section1">
+
+          <div class="web">
+            <i class="fas fa-cloud"></i>
+            <br>
+            Web Publishing 
+          </div>
+
+          <div class="slider-area slider">
+            <div class="items"><a href="web/hershe/index.html" target="blank_"><img src="images/w6.png" alt=""></a></div>
+            <div class="items"><a href="web/byul/index.html" target="blank_"><img src="images/w5.png" alt=""></a></div>
+            <div class="items"><a href="https://focused-engelbart-8a88ef.netlify.app/" target="blank_"><img src="images/w2.png" alt=""></a></div>
+            <div class="items"><a href="web/hollys/index.html" target="blank_"><img src="images/w3.png" alt=""></a></div>
+            <div class="items"><a href="web/junglebook/index.html" target="blank_"><img src="images/w4.png" alt=""></a></div>
+            <div class="items"><a href="https://l22hye0n500.github.io/todo_list/greet" target="blank_"><img src="images/w1.png" alt=""></a></div>
+  
+  
+          </div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <script src="slick.js"></script>
+          <script>
+            $('.slider-area').slick({
+              dots: true,
+              infinite: true,
+              autoplay: true,
+              speed: 300,
+              slidesToShow: 1,
+              centerMode: true,
+              variableWidth: true
+            });
+          </script>
+
+          
+
+
+         
+        </div>
+
+
+        <div class="section2">
+
+          <div class="ttop">
+            <i class="fas fa-cloud"></i>
+            <br>
+            <p>Web & App Design<br></p>
+          </div>
+
+          <ul class="season">
+            
+
+
+            <li><a href="./web/d1.html" target="blank_" ><img src="images/d1.png" alt="" style="background-size:auto"></a>
+              <p>Web Design </p>
+            </li>
+
+            <li><a href="images/todo1.png"  data-lightbox="example-set"><img src="images/d5.png" alt="">
+            </a>
+            <p>Web Design</p>
+           </li>
+
+            <li><a href="images/de3.jpg"  data-lightbox="example-set"><img src="images/d3.png" alt="">
+              </a> 
+              <p>App Design</p>
+            </li>
+
+            <li><a href="./web/d2.html"  target="blank_" ><img src="images/d2.png" alt="">
+            </a>
+            <p>App Design</p>
+          </li>
+
+
+            
+
+            <span></span>
+          </ul>
+          
+        </div>
+      
+
+        <div class="section3">
+
+          <p class="sectext1">
+            <i class="fas fa-cloud"></i>
+            <br>
+            Gallery
+          </p>
+          <div class="colorbox"></div>
+          <table>
+            <tr>
+              <td><a href="images/donut1.png" data-lightbox="example-set"><img src="images/gallary1.png" alt=""> </a></td>
+              <td><a href="images/gallary2.gif" data-lightbox="example-set"><img src="images/gallary2.gif" alt=""></a></td>
+              <td><a href="images/p21.png" data-lightbox="example-set"><img src="images/gallary3.png" alt=""></a></td>
+            </tr>
+            <tr>
+              <td><a href="images/p81.png" data-lightbox="example-set"><img src="images/gallary4.png" alt=""></a></td>
+              <td><a href="images/p51.png" data-lightbox="example-set"><img src="images/gallary5.png" alt=""></a></td>
+              <td><a href="images/p61.png" data-lightbox="example-set"><img src="images/p6.jpg" alt=""></a></td>
+            </tr>
+           
+          </table>
+
+
+ 
+          <div class="custom-shape-divider-bottom-1637233025">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        </div>
+
+      
+        
+        
+        
+        
+        
+        </div>
+        
+  
+
+    </body>
+
+
+
+
+    </html>

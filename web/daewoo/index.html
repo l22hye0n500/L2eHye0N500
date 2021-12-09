@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>DSME 대우조선해양</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+  
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/light/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/dark/dark.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="themes/bar/bar.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+
+
+<style>
+    
+    *{margin: 0; padding:0;}
+    body,html{width: 100%;height: 100%; margin:0; padding:0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    #wrap{width:1800px; height:100%; margin:0 auto;  }
+    header{position:relative; width:100%; height:120px;}
+    .home{width:100%; height:40px; background: royalblue; margin:0; padding:0; }
+    .home ul{position: absolute; margin:0; padding:0; margin:0; right: 15%;} .home li{float: left; margin:0 18px; line-height: 40px; }   
+    .home li a{display: inline-block;color:white; font-size:0.8em;transition: all 0.5s;}
+    .home li:hover a{color:lightskyblue;transition: all 0.5s;}
+    .logo {position: absolute; top:60px; left:18%; width:170px; height:40px;}
+    .main{width:50%; background:#eee; position:absolute; left:35%; top:80px;z-index: 999;}
+    .main ul{margin:0; padding:0;  }
+    .main>ul>li{float: left; width: 140px; }
+    .main>ul>li>a{color:grey;  margin-left:35px; width:200px; }
+    #last{margin-left:20px; }
+    #four{margin-left:20px; }
+    .main>ul>lia:last-child{margin-left:100px;}
+    .main>ul>li>a:hover {border-bottom: 2px solid royalblue;}
+    .main li .sub{width:100%; height: 0; overflow: hidden; transition:height 0.3s ease-out;}
+    .main ul:hover .sub{height:160px;}
+    .main li .sub li a{display: block; text-align: center; margin-top:15px; font-size: 0.9em; color: #999; font-weight: 500;}
+    .main li .sub li a:hover{color: royalblue;}
+     #wrapper{position:absolute; top:25px;} 
+    
+     .textb{ width:500px; margin: 0 auto; text-align: center; font-size:11.5pt; line-height: 20px;}
+    .title1{ width:400px; height:50px; margin: 0 auto; text-align: center; font-size: 3em; font-weight: bold; }
+    
+    
+    .wrap2{position: relative; top:60%; width: 1000px; height: 100%; margin:0 auto; }
+    .sec1{ position: absolute; width:100%; height:500px;left:-0px;}
+   
+    .p1{ width:700px; height:300px; margin: 0 auto; padding: 0;  position: relative; top:50px; }
+    
+    .p1 div {  width:220px; height:300px; display: inline-block; margin: 0 3px; overflow: hidden; border-radius: 10px; }
+    .p1 a{transition: all 0.5s;}
+    .p1 a:hover{transform: scale(1.5); transition: all 0.5s;}
+    .p1>.p1_1>a{display: block; background: url(images/business1.jpg); width:220px; height:300px;}
+     .p1>.p1_2>a{display: block; background: url(images/business2.jpg); width:220px; height:300px; }
+     .p1>.p1_3>a{display: block; background: url(images/business3.jpg); width:220px; height:300px; }
+    
+    .p1>div>a>p{display: block; color:white; position: absolute; bottom: 0px; text-align: center; width:220px; height:50px;line-height: 50px; background: rgba(255,255,255,0.5); font-weight: bold; }
+    
+    
+ 
+    
+    .p2{width:1000px; height:260px; }
+    .p2>a{display: block; width:1000px; height:260px; background: url(images/b-box.jpg); }
+    
+    
+    
+    .sec2{position: absolute; top:800px; width:100%; height:500px;   }
+    
+   
+    .sec3{width: 100%; height:300px; position: relative; bottom:-380px; background: #ccc; }
+    .sec3>.sec3_1{width:200px; height: 100%; position: absolute;}
+    .sec3>.sec3_1>p{text-align: center; font-size: 3em; font-weight: bold; padding-top: 30px; }
+    .sec3>.sec3_1>p:after{content: "+More"; font-size: 16pt !important; color:rgba(0,0,0,0.7); position: absolute; top:200px; left:50px; padding: 10px 15px; text-align: center; background: rgba(255,255,255,0.3); cursor: pointer;}
+     .sec3>.sec3_1>p:hover:after{background-color:steelblue; color:white; text-decoration: none; transition:all 0.5s;}*/
+           
+    .sec3>.sec3_1>p:after{border: 1px transparent solid;} 
+    
+    .sec3>.sec3_2{width:230px; height: 100%; position: absolute;  left:200px;}
+    .sec3>.sec3_2>p:nth-child(1){color:rgba(0,0,0,0.6); font-weight: bold; padding-top:40px; line-height: 20px;}
+    .sec3>.sec3_2>#small1{color:rgba(0,0,0,0.6); font-size:small; line-height:20px;}
+    
+     .sec3>.sec3_3{width:230px; height: 100%; position: absolute; left:475px;}
+    .sec3>.sec3_3>p:nth-child(1){color:rgba(0,0,0,0.6); font-weight: bold; padding-top:40px; line-height: 20px;}
+    .sec3>.sec3_3>#small1{color:rgba(0,0,0,0.6); font-size:small; line-height:20px;}
+    
+    
+     .sec3>.sec3_4{width:230px; height: 100%; position: absolute; left:750px;}
+    .sec3>.sec3_4>p:nth-child(1){color:rgba(0,0,0,0.6); font-weight: bold; padding-top:40px; line-height: 20px;}
+    .sec3>.sec3_4>#small1{color:rgba(0,0,0,0.6); font-size:small; line-height:20px;}
+    
+    
+    
+    .sec4{position: relative;bottom: -550px;} 
+    .sec4_p{width: 1000px; height:260px; position: relative; top:50px;}/*400 360*/
+    .sec4_p div{ width:300px; height: 200px; display: inline-block; margin: 0 13px; overflow: hidden;}
+    .sec4_p>.sec4_p1>a{display: block; background: url(images/sus1.jpg); width:300px; height:200px; position: absolute;}
+     .sec4_p>.sec4_p2>a{display: block; background: url(images/sus2.jpg); width:300px; height:200px; position: absolute;}
+    .sec4_p>.sec4_p3>a{display: block; background: url(images/sus3.jpg); width:300px; height:200px; position: absolute;}
+    
+    .sec4 a p{position: absolute; bottom:0px;width:100%; height:0;transition: all 1s; text-align: center; line-height: 20px;}
+    .sec4 a{ color:rgba(0,0,0,0.8); overflow: hidden;border-radius: 30px;}
+    .sec4 a:hover p{transition: all 1s; height: 100px; color:rgba(0,0,0,0.8); background: rgba(255,255,255,0.5);}
+    
+    #bold1{font-weight:bold; font-size:16pt;}
+        
+    
+    
+    .sec5{width:1000px; height: 350px; position: relative; text-align: center; background: url(images/visit.jpg); margin:150px 0;}
+    .sec5_1{content: "dsdfx"; background-color: steelblue; opacity: 0.6; width:1000px; height:350px; display: block; position: relative; top:0px; color: black;}   
+    .sec5_2{position: absolute; top:100px; width:550px; height: 150px; text-align: center; border:3px white solid; margin-left: 230px; }
+    .sec5_2>p:nth-child(1){ line-height: 100px; font-weight: bold; color: white; font-size:2em;}
+    .sec5_2>p:nth-child(2){ line-height: 30px; font-weight: bold; color: white; font-size:12pt; border: 3px white solid; width:120px; height:30px; margin:0 auto;  position: absolute; top:90px; left:200px; cursor: pointer; transition: all 0.5s;}
+    .sec5_2>p:nth-child(2):hover{background: royalblue; border: 3px royalblue solid;transition: all 0.5s; border-radius: 10px;}
+    
+    
+    .sec6{ width:1000px; height: 140px; position: relative;}
+    .pic6{border:1px #ccc solid;  width:480px; height: 140px; position: absolute; }
+    .pic6>a{background: url(images/cash.png) no-repeat; display: block; width:100%; height: 100%; position: absolute; left:20px;}
+    .pic6>a:after{content: "투자정보"; font-weight: bold; font-size:18pt; position: absolute; left:140px; top:30px;}
+     .pic6>a:before{content: "대우조선 해양은 주의 이익을 최선으로 합니다";  font-weight: bold;font-size:11pt; position: absolute; left:140px; top:80px;}
+    .pic6_1{ border:1px #ccc solid; width:480px; height: 140px;position: absolute; right:0;}
+      .pic6_1>a{background: url(images/people.png) no-repeat; display: block; width:100%; height: 100%; position: absolute; left:20px;}
+    .pic6_1>a:after{content: "채용공고"; font-weight: bold; font-size:18pt; position: absolute; left:140px; top:30px;}
+     .pic6_1>a:before{content: "미래를 선도할 글로벌 인재를 찾습니다";  font-weight: bold;font-size:11pt; position: absolute; left:140px; top:80px;}
+    
+    footer{width:100%; height:100px;position: relative; top: 2750px;background:rgba(0,0,0,0.8);}
+  
+    footer>.logo2{background: url(images/logo_g.png); width: 140px; height: 30px; position: absolute; top:35px; left:20%;}
+    .footli{ width: 900px; height: 80px; position: absolute; left:500px; top:20px;}
+    .footli ul li{list-style: none; text-decoration: none; display: inline-block; font-weight: bold; }
+    
+    .footli ul li a{color: grey;text-align: center;display: block; margin:0 30px;transition: all 0.5s;}
+    .footli ul li a:hover{color: steelblue;transition: all 0.5s;}
+    address{position: absolute; color: grey; bottom:30px; left:530px; }
+      select{position: absolute; right: 250px; top:55px; background:rgba(0,0,0,0); color: grey; }	
+    </style>
+    
+    
+    
+    <!-- 흘러가는 배너-->
+  <script type="text/javascript">
+$(function(){
+	var dir=-1;//방향
+	var speed=1;//속도
+	var loc=1;//위치
+
+setTimeout(banner_ani,100);
+
+function banner_ani(){
+	loc+=speed*dir;
+	
+	if(loc<=-930&& dir<0){loc=0}
+	if(loc>=0 && dir>0){loc=-930}
+
+	$('#bannerinner').css("left",loc)
+	setTimeout(banner_ani,10)
+
+}
+
+$('#banner').mouseenter(function(){
+	speed=0
+})
+$('#banner').mouseleave(function(){
+	speed=1
+})
+
+$('.left').mouseenter(function(){
+	dir=-1
+	speed=2
+})
+$('.right').mouseenter(function(){
+	dir=1
+	speed=2
+})
+})
+
+</script>   
+    
+    
+    <!--흘러가는 배너-->
+   <style type="text/css">
+
+#bannerwrap{width:1000px;margin:auto; position: absolute; top:200px;background-color:steelblue; padding: 30px 0;}
+#bannerwrap div{float:left ; }
+
+#banner{position:relative;width:930px;height:167px;overflow:hidden}
+#bannerinner{position:absolute;left:0;top:0;
+				width:2300px;height:65px;}
+
+.banner{float:left;width:250px;height:167px;cursor:pointer}
+.banner p{text-align:center}
+.left,.right{padding-top:60px;cursor:pointer}
+     
+</style>
+   
+   
+   
+    
+</head>
+<body>
+<div id="wrap">
+<header>
+<nav class="home">
+<ul>
+<li><a href="">HOME</a></li>
+<li><a href="">JOIN</a></li>
+<li><a href="">LOGIN</a></li>
+<li><a href="">CONTECT US</a></li>
+<li><a href="">SITEMAP</a></li>
+</ul>
+</nav>
+<div class="logo"><a href=""><img src="images/main_logo.png"></a></div>
+<nav class="main">
+<ul>
+<li>
+<a href="#">기업소개</a>
+<ul class="sub">
+<li><a href="#">기업안내</a></li>
+<li><a href="#">CEO인사말</a></li>
+<li><a href="#">비전</a></li>
+<li><a href="#">기업문화</a></li>
+</ul>
+</li>
+<li>
+<a href="#">사업분야</a>
+<ul class="sub">
+<li><a href="#">조선</a></li>
+<li><a href="#">해양</a></li>
+<li><a href="#">플랜트</a></li>
+</ul>
+</li>
+<li>
+<a href="#">기술연구</a>
+<ul class="sub">
+<li><a href="#">연구소 소개</a></li>
+<li><a href="#">연구개발분야</a></li>
+<li><a href="#">신기술 소개</a></li>
+</ul>
+</li>
+<li>
+<a id="four" href="#">지속가능경영</a>
+<ul class="sub">
+<li><a href="#">윤리경영</a></li>
+<li><a href="#">사회공헌</a></li>
+<li><a href="#">동반성장</a></li>
+</ul>
+</li>
+<li>
+<a href="#">홍보센터</a>
+<ul class="sub">
+<li><a href="#">보도자료</a></li>
+<li><a href="#">재무정보</a></li>
+<li><a href="#">영업보고서</a></li>
+</ul>
+</li>
+<li>
+<a id="last" href="#">거제옥포조선소</a>
+<ul class="sub">
+<li><a href="#">견학신청</a></li>
+<li><a href="#">찾아오는길</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</header>
+
+
+
+
+<!--니보슬라이드넣음-->
+<div id="wrapper">
+     
+
+        <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <img src="images/v1.jpg" data-thumb="images/v1.jpg" alt="" />
+                <a href="http://dev7studios.com"><img src="images/v2.jpg" data-thumb="images/v2.jpg" alt="" title="This is an example of a caption" /></a>
+                <img src="images/v3.jpg" data-thumb="images/v3.jpg" alt="" data-transition="slideInLeft" />
+                <img src="images/v1.jpg" data-thumb="images/v1.jpg" alt="" title="#htmlcaption" />
+            </div>
+            <div id="htmlcaption" class="nivo-html-caption">
+               DSME 대우조선해양. 
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+    
+    
+    
+    <div class="wrap2"><!--메인섹션다섯개 넣기-->
+    <div class="sec1">
+        
+        <div class="textb"><p class="title1">Business</p><br>
+       미래에도 지속 가능한 조선소를 만들기 위해 하드웨어와 소프트웨어의 파괴적 혁신을 통해 세계 최고의 첨단 조선소를 구축합니다.
+
+     </div>
+     
+       
+       <div class="p1">
+           
+           <div class="p1_1"><a href="#"><p>조선</p></a></div>
+           <div class="p1_2"><a href="#"><p>해양</p></a></div>
+           <div class="p1_3"><a href="#"><p>플랜트</p></a></div>
+           
+       </div>
+       
+       
+       <div class="p2"><a href="#"></a></div>
+       
+        </div>
+     
+     
+     
+     
+     
+     <div class="sec2">
+         
+          <div class="textb"><p class="title1">New Technology</p><br>
+      대우조선해양이 부유한 각종 첨단 기술로 조선사업의 미래를 <br>개척해 나가고 있습니다.
+
+     </div>
+        
+         <br>
+         <br>
+         
+         
+         <!--흘러가는 배너--> 
+         <div id="bannerwrap" class="">
+	<div id="" class="left"><img src="images/back.png">	</div>
+	<div id="banner" class="">
+		<div id="bannerinner" class="">
+		<p class="banner"><img src="images/n7.jpg"></p>
+		<p class="banner"><img src="images/n8.jpg"></p>
+		<p class="banner"><img src="images/n1.jpg"></p>
+		<p class="banner"><img src="images/n2.jpg"></p>
+		<p class="banner"><img src="images/n3.jpg"></p>
+		<p class="banner"><img src="images/n4.jpg"></p>
+		<p class="banner"><img src="images/n5.jpg"></p>
+		<p class="banner"><img src="images/n6.jpg"></p>
+		<p class="banner"><img src="images/n7.jpg"></p>
+		<p class="banner"><img src="images/n8.jpg"></p>
+		
+		
+	</div>
+	</div>
+	<div id="" class="right"><img src="images/next.png">	</div>
+</div>  <!--오른쪽 왼쪽 단추 배경 빼기-->
+            
+               <div class="sec3">
+         <div class="sec3_1"><p>News</p></div>
+         
+          <div class="sec3_2"><p>대우조선해양, 2017년 7,330억원 영업이익 달성</p><br><br><p id="small1">대우조선해양(대표이사 정성립)이 연간 영업이익 흑자전환에 성공했다.<br> 이는 전기 손익 수정을 통해 바뀐 재무제표를 기준으로 2011년 흑자 이후 6년만이다. 대우조선해양은 2017년 매출액 11…<br><br>2018.03.12</p></div>
+          
+           <div class="sec3_3">
+               
+               <p>대우조선해양VLCC 2척 수주, 릴레이 수주 성공으로 골든 위크 …</p><br><br><p id="small1">대우조선해양이 이번 주에만 모두 7천 8억달러 상당의선박 수주에 성공했다. <br>대우조선해양(대표이사 정성립)은 유럽 선사로부터 초대형원유운반선(VLCC) 2척을 수주했다고 2일 밝혔다. 이번…<br><br>2018.03.02</p>
+           </div>
+            <div class="sec3_4">
+                 <p>대우조선해양 소속 임원 2명, 세계 인명사전 동시 등재 …</p><br><br><p id="small1">대우조선해양 임원 2명이 같은 해에 세계 인명사전에 등재 되는 경사를 맞았다. <br>대우조선해양(대표이사 정성립)은 선박 기본 설계담당 권오익 상무. 해양사업개발 서재관 상무가 '마르퀴즈 후즈후 …<br><br>2018.02.09</p>
+            </div>
+         
+         
+         
+         
+         
+     </div> 
+     
+     
+     
+     <div class="sec4">
+         
+                   <div class="textb"><p class="title1">Sustainability</p><br>
+     가치를 더하는 기업, 보다 행복한 내일을 계획합니다.
+
+     </div>
+         
+         
+         <div class="sec4_p">
+          <div class="sec4_p1"><a href="#"><p><span id="bold1">윤리경영</span> <br><br> 공정하고 투명한 기업경영으로<br>대우조선해양의 미래를 이끌어갑니다.</p></a></div>
+             <div class="sec4_p2"><a href="#"><p><span id="bold1">사회공헌</span><br><br> 인간존중과 상생의 철학을 바탕으로<br>사회공헌을 펼쳐갑니다</p></a></div>
+             <div class="sec4_p3"><a href="#"><p><span id="bold1">동반성장</span><br><br> 멀리 가려면 함께 가야합니다.<br>대우조선해양과 함께합시다.</p></a></div>
+          
+            </div>
+            
+            
+           <div class="sec5"><!--사진, 애프터로 배경주기-->
+               <div class="sec5_1"></div>
+          <div class="sec5_2"><!--화이트 보더-->
+        <p>거제 옥포 조선소 견학신청</p>
+        <p>자세히보기</p>
+     </div>
+         
+     </div>
+     
+     
+     <div class="sec6">
+         <div class="pic6"><a href="#"></a></div>
+         <div class="pic6_1"><a href="#"></a></div>
+         
+     </div>
+     
+     
+     
+     </div>
+     
+     
+   
+     </div>
+     
+     
+     
+   
+     
+     
+     
+     
+     
+</div>
+
+<footer> 
+     <div class="logo2"> </div>
+     
+    <div class="footli">
+     <ul>
+         <li><a href="#">개인정보처리방침</a></li>
+         <li><a href="#">기술정보센터</a></li>
+         <li><a href="#">중공업사관학교</a></li>
+         <li><a href="#">채용공고</a></li>
+     </ul>
+         </div>
+         
+         
+      <address>경상남도 거제시 거제대로 3370 대표전화 본사 및 옥포조선소 055-735-2114 서울사무소 02-2129-0114 </address>   
+          
+           <select name="job" size="1">
+           <option>Family Site</option>
+           <option>신한중공업(주)</option>
+           <option>상우중공업 (주)</option>
+          
+       </select>
+     </footer>
+     
+     
+     
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
